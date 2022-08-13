@@ -1,5 +1,19 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i = 0; i < array.length; i++){
+    for(let j = 0; j < array.length; j++){
+      // If the i is not the same as j then check if the elements are the same
+      if(i !== j){
+        // Check if element at i plus element at j is equal to target
+        if(array[i] + array[j] === target) { 
+          // If it is, return true
+          return true;
+        }
+        // Otherwise continue with the loop
+      }
+    }
+  }
+  return false;
 }
 
 /* 
